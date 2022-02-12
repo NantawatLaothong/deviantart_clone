@@ -20,6 +20,9 @@ app.get('/create', async(req, res)=>{
     res.redirect('/');
 })
 
+app.get('/test', async (req, res)=>{
+    res.send('This app is running fine')
+})
 
 app.get('/:user', getHome)
 
@@ -33,4 +36,5 @@ app.get('/', async(req, res)=>{
 
 app.listen(port, ()=>{
     console.log(`app is running on port: ${port}`);
+    // console.log(process.env.mongoURI)
 })

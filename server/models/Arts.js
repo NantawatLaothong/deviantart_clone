@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
+const mongoUrl = process.env.mongoURI
 
+// password is store in .env 
 async function connect(){
-    mongoose.connect('mongodb://localhost:27017/deArt');
+    mongoose.connect(mongoUrl);
 }
 
 connect().then(res=>console.log('DB connected'))
