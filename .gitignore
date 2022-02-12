@@ -1,0 +1,6 @@
+# sys variables
+*.env
+
+# directories
+node_modules/
+
